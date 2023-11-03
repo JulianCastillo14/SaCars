@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+*{
+    font-family: 'Roboto', sans-serif;
+}
+#container{
+    margin: 0;
+    background-color: #053B50;
+    width: 40vw;
+    height: 93vh;
+    float: right;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#aside-nav{
+    margin-top: 3vh;
+    font-size: 24px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+#aside-nav > a{
+    display: block;
+    margin: 5px 40px;
+    
+}
+.Ingreso{
+    display: flex;
+}
+#iniciar-sesion{
+    margin-top: 52vh;
+    padding: 0;
+    align-items: center;
+}
+.Ingreso > a {
+    margin-left: 8px;
+}
+#logo-is{
+    color: #176B87;
+}
+#registrarse{
+    margin-top: 2vh;
+}
+#registrarse > button{
+    margin-left: 1vw;
+    background-color: #1AACAC;
+    color: #EEEEEE;
+    border: none;
+    border-radius: 18px;
+    font-size: 16px;
+    height: 3vh;
+    width: 17vw;
+}
+
+@media only screen and (max-width: 391px) {
+    #container{
+        width: 100vw;
+    }
+    #logo-is{
+        height: 8vh;
+        width: 8vw;
+    }
+    #iniciar-sesion{
+        margin-top: 46vh;
+    }
+    #registrarse{
+        margin-top: 0;
+    }
+    #registrarse > button{        
+        width: 38vw;
+    }
+}
+@media only screen and (min-width: 1440px) {
+    #container{
+        display: none;
+    }  
+}
