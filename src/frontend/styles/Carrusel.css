@@ -1,0 +1,18 @@
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  color: #053B50;
+}
+#carrusel{
+    background-color: #176B87;
+}
+.carousel-item img {
+    max-height: 600px; /* Ajusta este valor a la altura que prefieras */
+
+}
+
+@media only screen and (min-width:1440px) {
+    .carousel-item img {
+        max-height: 100vh; /* Ajusta este valor a la altura que prefieras */
+        
+    }
+}
