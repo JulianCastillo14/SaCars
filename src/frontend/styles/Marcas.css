@@ -1,0 +1,47 @@
+#Marcas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3vh;
+}
+.marca{
+    width: 14vw;
+    height: 17vh;
+    margin: 1vw;
+    padding: 0;
+}
+.Chevrolet{
+    background: url('../assets/images/marcas/chevrolet-logo.png') no-repeat ;
+    background-size: cover;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.Ford{
+    background: url('../assets/images/marcas/ford-logo.png') no-repeat;
+    background-size: contain;
+    border: none;
+
+}
+.Toyota{
+    background: url('../assets/images/marcas/toyota-logo.png') no-repeat;
+    background-size: contain;
+    border: none;
+}
+.Nissan{
+    background: url('../assets/images/marcas/nissan-logo.png') no-repeat;
+    background-size: contain;
+    border: none;
+
+}
+.BMW{
+    background: url('../assets/images/marcas/BMW-logo.png') no-repeat;
+    background-size: contain;
+    border: none;
+} 
