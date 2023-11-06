@@ -63,7 +63,6 @@
         width: 8vw;
     }
 }
-
 @media only screen and (max-width: 768px) {
     #navBar{
         width: 50vw;
@@ -79,7 +78,6 @@
         margin: 0 2vw;
     }
 }
-
 @media only screen  and (max-width: 391px) {
     #navBar{
         display: none;

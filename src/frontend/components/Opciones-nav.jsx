@@ -1,10 +1,9 @@
 import React from 'react'
 import '../styles/Opciones-nav.css'
-import './Opciones-nav.jsx'
 
 const opciones = () => {
   return (
-    <div id='container'>
+    <div id='opciones-nav'>
       <aside id="aside-nav">
         <a href="#" >AUTOMÓVILES</a><br />
         <a href="#" >CAMIONETAS</a><br />

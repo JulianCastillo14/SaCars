@@ -2,12 +2,13 @@
 *{
     font-family: 'Roboto', sans-serif;
 }
-#container{
-    margin: 0;
+#opciones-nav{
+    position: absolute;
+    z-index: 2;
+    right: 0;
     background-color: #053B50;
     width: 40vw;
     height: 93vh;
-    float: right;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -40,7 +41,7 @@ a{
     color: #176B87;
 }
 #registrarse{
-    margin-top: 2vh;
+    margin-top: 1vh;
 }
 #registrarse > button{
     margin-left: 1vw;
@@ -54,15 +55,15 @@ a{
 }
 
 @media only screen and (max-width: 391px) {
-    #container{
-        width: 100vw;
+    #opciones-nav{
+        width: 50vw;
     }
     #logo-is{
         height: 8vh;
         width: 8vw;
     }
     #iniciar-sesion{
-        margin-top: 46vh;
+        margin-top: 42vh;
     }
     #registrarse{
         margin-top: 0;
@@ -72,7 +73,7 @@ a{
     }
 }
 @media only screen and (min-width: 1440px) {
-    #container{
+    #opciones-nav{
         display: none;
     }  
 }

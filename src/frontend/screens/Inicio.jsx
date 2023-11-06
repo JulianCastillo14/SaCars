@@ -21,7 +21,6 @@ const Inicio = () => {
       <HeaderSB onToggleOpciones={handleToggleOpciones}></HeaderSB>
       {showOpciones && <OpcionesSB></OpcionesSB>}
       <Carrusel imagenes={imagenesInicio} />
-
     </div>
   )
 }

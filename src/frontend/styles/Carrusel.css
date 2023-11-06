@@ -3,6 +3,8 @@
   color: #053B50;
 }
 #carrusel{
+    position: relative;
+    z-index: 1;
     background-color: #176B87;
 }
 .carousel-item img {
