@@ -5,13 +5,13 @@ import Auto2 from '../assets/images/Automoviles/cruce-chevrolet.png';
 import Auto3 from '../assets/images/Automoviles/onix-chevrolet.png';
 import Auto4 from '../assets/images/Automoviles/aveoGT-chevrolet.png';
 import Auto5 from '../assets/images/Automoviles/optra-chevrolet.png';
+import Auto6 from '../assets/images/Automoviles/fiesta-ford.png';
 
 import '../styles/Automoviles.css'
 
 const Automoviles = () => {
   return (
     <div id='container-automoviles'>
-      <div className='autos'>
       <Vehiculo 
             imagen= {Auto1}
             descripcion='Aveo 1.6 Sd'
@@ -36,8 +36,6 @@ const Automoviles = () => {
             color='Azul Metálico'
             precio='57.999.000'
         />
-      </div>
-      <div className='autos'>
         <Vehiculo 
               imagen= {Auto4}
               descripcion='Aveo Amotion Five Gt'
@@ -54,7 +52,14 @@ const Automoviles = () => {
             color='Gris'
             precio='17.000.000'
         />
-      </div>
+        <Vehiculo 
+            imagen= {Auto6}
+            descripcion='Ford Fiesta'
+            modelo='Ford Fiesta Se 1.6 Mec' 
+            anio='2018' 
+            color='Blanco'
+            precio='45.490.000'
+        />
     </div>
   )
 }
