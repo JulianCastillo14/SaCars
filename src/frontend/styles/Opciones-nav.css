@@ -30,7 +30,7 @@ a{
     display: flex;
 }
 #iniciar-sesion{
-    margin-top: 52vh;
+    margin-top: 50vh;
     padding: 0;
     align-items: center;
 }
@@ -56,14 +56,14 @@ a{
 
 @media only screen and (max-width: 391px) {
     #opciones-nav{
-        width: 50vw;
+        width: 60vw;
     }
     #logo-is{
         height: 8vh;
         width: 8vw;
     }
     #iniciar-sesion{
-        margin-top: 42vh;
+        margin-top: 41vh;
     }
     #registrarse{
         margin-top: 0;

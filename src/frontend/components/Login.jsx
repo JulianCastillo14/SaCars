@@ -35,17 +35,17 @@ const Login = ({ onClose }) => {
   const [passwordShown, setPasswordShown] = useState(false);
   const togglePasswordVisiblity = () => {
     setPasswordShown(!passwordShown);
-  };
+};
 
 const [isVisible, setIsVisible] = useState(true);
 
   return isVisible ? (
     <div className='container-login'>
       <div>
+        <div className="login">
         <div id='exit' onClick={onClose}>
           <ExitLoginIcon/>
         </div>
-        <div className="login">
           <h2>Iniciar sesión en SaCars </h2>
           <div className='iniciar-sesion'>
               <div className="input-field">

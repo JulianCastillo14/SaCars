@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+*{
+    font-family: 'Roboto', sans-serif;
+}
+.container-signup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+#exit{
+    color: white;
+    background-color: #053B50;
+    padding-top: 10px;
+    width: 35vw;
+    padding-left: 31vw;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+#formulario-signup{
+    display: flex;
+    flex-direction: column;
+    background-color: #053B50;
+    color: white;
+    padding: 10px 40px;
+    width: 35vw;
+    border: none;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    font-size: medium;
+}
+.signup-input{
+    border: none;
+    border-radius: 20px;
+    margin-bottom: 1vh;
+}
+#btn-registrarse{
+    background-color: #176B87;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    width: 100%;
+    height: 40px;
+    font-size: 20px;
+    margin-top: 30px;
+}
+.passwords{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+.c1 > input{
+    margin-left: 2vw;
+    width: 19vw;
+}
+.c2 > input{
+    margin-left: 2vw;
+    width: 19vw;
+}
+@media only screen and (max-width: 768px) {
+    #exit{
+        width: 60vw;
+        padding-left: 55vw;
+    }
+    #formulario-signup{
+        width: 60vw;
+        border: none;
+    }
+
+    .c1 > input{
+        width: 30vw;
+        margin-right: 2vw;
+    }
+    .c2 > input{
+        width: 26vw;
+        margin-right: 2vw;
+    }
+    
+}
+@media only screen  and (max-width: 391px) {
+    *{
+        overflow: hidden;
+    }
+    .container-signup{
+        align-items: normal;
+    }
+    #exit, #formulario-signup{
+        width: 100vw;
+    }
+    #exit{
+        margin-top: 7vh; 
+        padding-left: 93vw;    
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+    #formulario-signup{ 
+        height: 93vh;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .icon-movil{
+        height: 6vw;
+        width: 6vw;
+    }
+    .c1 > input{
+        width: 47vw;
+        margin-right: 2vw;
+    }
+    .c2 > input{
+        width: 39vw;
+        margin-right: 2vw;
+    }
+}
+

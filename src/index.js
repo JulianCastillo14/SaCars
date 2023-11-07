@@ -8,6 +8,7 @@ import App from './frontend/screens/Inicio.jsx';
 //import App from './frontend/components/Opciones-nav.jsx';
 //import App from './frontend/components/Header.jsx';
 //import App from './frontend/components/Login.jsx';
+//import App from './frontend/components/SignUp'
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

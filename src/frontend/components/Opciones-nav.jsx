@@ -1,7 +1,7 @@
 import React from 'react'
 import '../styles/Opciones-nav.css'
 
-const Opciones = ({ onLoginClick }) => {
+const Opciones = ({ onLoginClick, onSignUpClick }) => {
   return (
     <div id='opciones-nav'>
       <aside id="aside-nav">
@@ -15,7 +15,7 @@ const Opciones = ({ onLoginClick }) => {
         <a id='opcion-login' href='#' onClick={onLoginClick}>Iniciar sesión</a>
       </section>
       <section className='Ingreso' id='registrarse'>
-        <button>Registrarse</button>
+        <button onClick={onSignUpClick}>Registrarse</button>
       </section>
     </div>
   )

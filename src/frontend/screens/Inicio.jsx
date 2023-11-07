@@ -3,6 +3,7 @@ import OpcionesSB from '../components/Opciones-nav.jsx'
 import Carrusel from '../components/Carrusel.jsx'
 import Marcas from '../components/Marcas.jsx'
 import Login from '../components/Login.jsx'
+import SignUp from '../components/SignUp.jsx'
 
 import React, { useState } from 'react'
 import imagen1 from '../assets/images/Inicio/joy-sedan-azul-neptuno.jpg'
@@ -14,6 +15,7 @@ import '../styles/Inicio.css'
 const Inicio = () => {
   const [showOpciones, setShowOpciones] = useState(false);
   const [showLogin, setShowLogin] = useState(false);
+  const [showSignUp, setShowSignUp] = useState(false);
 
   const handleToggleOpciones = () => {
     setShowOpciones(!showOpciones);
@@ -22,14 +24,18 @@ const Inicio = () => {
   const handleShowLogin = () => {
     setShowLogin(true);
   }
+  const handleShowSignUp = () => {
+    setShowSignUp(true);
+  }
 
   const imagenesInicio = [imagen1, imagen2, imagen3, imagen4]
 
   return (
     <div>
-      <HeaderSB onToggleOpciones={handleToggleOpciones} onLoginClick={handleShowLogin}></HeaderSB>
-      {showOpciones && <OpcionesSB onLoginClick={handleShowLogin}></OpcionesSB>}
+      <HeaderSB onToggleOpciones={handleToggleOpciones} onLoginClick={handleShowLogin} onSignUpClick={handleShowSignUp}></HeaderSB>
+      {showOpciones && <OpcionesSB onLoginClick={handleShowLogin} onSignUpClick={handleShowSignUp}></OpcionesSB>}
       {showLogin && <Login onClose={() => setShowLogin(false)}></Login>}
+      {showSignUp && <SignUp onClose={() => setShowSignUp(false)}></SignUp>}
       <Carrusel imagenes={imagenesInicio} />
       <section id='marcas'>
         <h3>Marcas</h3>
