@@ -27,6 +27,7 @@ import '../styles/SingUp.css';
       fechaNacimiento: '',
       direccion: '',
       correoElectronico: '',
+      celular: '',
       nombreUsuario: '',
       contrasena: '',
       contrasenaRepetir: ''
@@ -61,9 +62,9 @@ import '../styles/SingUp.css';
         <form id='formulario-signup' onSubmit={handleSubmit}>
         <h2>Ingresa los siguientes datos:</h2>
         <label htmlFor="nombreCompleto">Nombre completo</label>
-        <input className="signup-input" type="text" name="nombreCompleto" placeholder="Nombre completo" onChange={handleChange} />
+        <input className="signup-input" type="text" name="nombreCompleto"  onChange={handleChange} />
         <label htmlFor="numeroDocumento">Número de documento</label>
-        <input className="signup-input" type="text" name="numeroDocumento" placeholder="Número de documento" onChange={handleChange} />
+        <input className="signup-input" type="text" name="numeroDocumento"  onChange={handleChange} />
         <label htmlFor="tipoDocumento">Tipo de documento</label>
         <select className="signup-input" name="tipoDocumento" onChange={handleChange}>
           <option value="" disabled selected>Selecciona un tipo de documento</option>
@@ -74,8 +75,10 @@ import '../styles/SingUp.css';
         </select>
         <label htmlFor="fechaNacimiento">Fecha de nacimiento</label>
         <input className="signup-input" type="date" name="fechaNacimiento" onChange={handleChange} />
-        <label htmlFor="direccion">Dirección</label>
-        <input className="signup-input" type="text" name="direccion" placeholder="Dirección" onChange={handleChange} />
+        <label htmlFor="direccion">Dirección*</label>
+        <input className="signup-input" type="text" name="direccion"  onChange={handleChange} />
+        <label htmlFor="celular">Celular*</label>
+        <input className="signup-input" type="text" name="celular"  onChange={handleChange} />
         <label htmlFor="correoElectronico">Correo electrónico</label>
         <input className="signup-input" type="email" name="correoElectronico" placeholder="Correo electrónico" onChange={handleChange} />
         <label htmlFor="nombreUsuario">Nombre de usuario</label>

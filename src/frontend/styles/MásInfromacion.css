@@ -2,7 +2,7 @@
 *{
     font-family: 'Roboto', sans-serif;
 }
-.container-signup{
+.container-masInfo{
     position: fixed;
     top: 0;
     left: 0;
@@ -23,8 +23,9 @@
     padding-left: 31vw;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+    margin: 0;
 }
-#formulario-signup{
+#formulario-masInfo{
     display: flex;
     flex-direction: column;
     background-color: #053B50;
@@ -35,13 +36,14 @@
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     font-size: medium;
+    margin: 0;
 }
-.signup-input{
+.masInfo-input{
     border: none;
     border-radius: 20px;
     margin-bottom: 1vh;
 }
-#btn-registrarse{
+#btn-enviar{
     background-color: #176B87;
     border: none;
     border-radius: 20px;
@@ -51,59 +53,30 @@
     font-size: 20px;
     margin-top: 30px;
 }
-.passwords{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10px;
-}
-.c1 > input{
-    margin-left: 2vw;
-    width: 19vw;
-}
-.c2 > input{
-    margin-left: 2vw;
-    width: 18vw;
-}
 label::after {
     content: "*";
     color: red;
-  }
-  
+}
 @media only screen and (max-width: 768px) {
     #exit{
         width: 60vw;
         padding-left: 55vw;
     }
-    #formulario-signup{
+    #formulario-masInfo{
         width: 60vw;
         border: none;
     }
-
-    .c1 > input{
-        width: 30vw;
-        margin-right: 2vw;
-    }
-    .c2 > input{
-        width: 26vw;
-        margin-right: 2vw;
-    }
-    
 }
 @media only screen  and (max-width: 391px) {
-    .container-signup{
-        align-items: normal;
-    }
-    #exit, #formulario-signup{
+    #exit, #formulario-masInfo{
         width: 100vw;
     }
     #exit{
-        margin-top: 7vh; 
         padding-left: 93vw;    
         border-top-left-radius: 0;
         border-top-right-radius: 0;
     }
-    #formulario-signup{ 
+    #formulario-masInfo{ 
         height: 93vh;
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
@@ -112,12 +85,5 @@ label::after {
         height: 6vw;
         width: 6vw;
     }
-    .c1 > input{
-        width: 47vw;
-        margin-right: 2vw;
-    }
-    .c2 > input{
-        width: 39vw;
-        margin-right: 2vw;
-    }
 }
+  

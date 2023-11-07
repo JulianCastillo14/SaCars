@@ -3,7 +3,6 @@ import logo from '../assets/images/logo_sacars.png'
 import '../styles/Header.css'
 
 const Header = (props) => {
-  console.log(props.onSignUpClick)
   return (
     <header id='encabezado'>
         <img className='logo-nav' src={logo} alt='Logo del concesionario"'/>
