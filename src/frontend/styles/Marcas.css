@@ -3,6 +3,7 @@
     align-items: center;
     justify-content: center;
     padding: 3vh;
+    margin: auto 4vh;
 }
 .marca{
     width: 14vw;
@@ -10,18 +11,13 @@
     margin: 1vw;
     padding: 0;
 }
+.marca:last-child {
+    margin-bottom: 2vh;
+}
 .Chevrolet{
     background: url('../assets/images/marcas/chevrolet-logo.png') no-repeat ;
-    background-size: cover;
-    color: white;
+    background-size: contain;
     border: none;
-    padding: 15px 30px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
 }
 .Ford{
     background: url('../assets/images/marcas/ford-logo.png') no-repeat;
@@ -45,3 +41,22 @@
     background-size: contain;
     border: none;
 } 
+@media only screen  and (max-width: 391px) {
+    #Marcas{
+        flex-direction: column;
+        padding: 0;
+    }
+    .marca{
+        width: 40vw;
+        height: 12vh;
+    }
+    .Nissan{
+        margin-top: 3vh;
+        margin-left: 6vw;
+    
+    }
+    .BMW{
+        margin-top: 3vh;
+        margin-left: 6vw;
+    }
+}
