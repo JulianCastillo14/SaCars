@@ -1,0 +1,10 @@
+#container-automoviles{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.autos{
+    display: flex;
+    margin-bottom: 25px;
+}

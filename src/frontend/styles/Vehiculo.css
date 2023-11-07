@@ -1,0 +1,47 @@
+.vehiculo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #053B50;
+    border: none;
+    border-radius: 20px;
+    width: 25vw;
+    height: 80vh;
+    margin-top: 20px;
+    margin-left: 20px;
+    color: white;
+    padding: 5px 5px;
+}
+.container-img-vehiculo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20vw;
+    height: 32vh;
+    padding: 0;
+
+}
+.container-img-vehiculo > img {
+    width: 100%;
+    height: 69%;
+    object-fit: cover;
+    margin: 0;
+}
+.vehiculo-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.vehiculo-info > button{
+    background-color: #1AACAC;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    margin-bottom: 10px;
+    width: 22vw;
+}
+#precio{
+    color: #A0E9FF;
+}
