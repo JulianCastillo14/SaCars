@@ -1,10 +1,25 @@
 #container-catalogo {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
 }
 #container-catalogo > div {
-    flex: 1 0 21%; /* Cambia este valor para controlar cuántos elementos por línea */
+    flex: 1 0 21%; 
     margin: 1%;
     box-sizing: border-box;
+}
+@media only screen and (max-width: 1440px) {
+    #container-catalogo > div {
+        flex: 1 0 24%; 
+    }
+}
+@media only screen and (max-width: 768px) {
+    #container-catalogo > div {
+        flex: 1 0 32%; 
+    }
+}
+@media only screen  and (max-width: 391px) {
+    #container-catalogo > div {
+        flex: 1 0 50%; 
+        margin: 3%;
+    }
 }

@@ -14,7 +14,6 @@ const Header = (props) => {
             <a href="#" >PICK-UPS</a>
             <a href="#" >VANS</a>
         </nav>
-        <svg className='size' id='carrito-compras' xmlns="http://www.w3.org/2000/svg" width="4vw" height="4vh" viewBox="0 0 256 256"><g fill="currentColor"><path d="m224 72l-28.52 92.71a16 16 0 0 1-15.3 11.29H84.07a16 16 0 0 1-15.39-11.6L42.29 72Z" opacity=".2"/><path d="M96 216a16 16 0 1 1-16-16a16 16 0 0 1 16 16Zm88-16a16 16 0 1 0 16 16a16 16 0 0 0-16-16Zm47.65-125.65l-28.53 92.71A23.89 23.89 0 0 1 180.18 184H84.07A24.11 24.11 0 0 1 61 166.59L24.82 40H8a8 8 0 0 1 0-16h16.82a16.08 16.08 0 0 1 15.39 11.6L48.32 64H224a8 8 0 0 1 7.65 10.35ZM213.17 80H52.89l23.49 82.2a8 8 0 0 0 7.69 5.8h96.11a8 8 0 0 0 7.65-5.65Z"/></g></svg>
         <div className='button-group'>
                 <button className='button button-left' onClick={props.onSignUpClick}>Registrarse</button>
                 <button className='button button-right' onClick={props.onLoginClick}>Iniciar sesión</button>
