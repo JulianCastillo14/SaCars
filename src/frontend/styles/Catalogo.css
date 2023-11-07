@@ -1,10 +1,9 @@
-#container-automoviles {
+#container-catalogo {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
-
-#container-automoviles > div {
+#container-catalogo > div {
     flex: 1 0 21%; /* Cambia este valor para controlar cuántos elementos por línea */
     margin: 1%;
     box-sizing: border-box;

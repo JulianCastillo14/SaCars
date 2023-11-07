@@ -20,11 +20,11 @@ import Auto17 from '../assets/images/Automoviles/I5-bmw.png';
 import Auto18 from '../assets/images/Automoviles/4-series-bmw.png';
 import Auto19 from '../assets/images/Automoviles/gran-coupe-bmw.png';
 import Auto20 from '../assets/images/Automoviles/serie3-bmw.png';
-import '../styles/Automoviles.css'
+import '../styles/Catalogo.css'
 
 const Automoviles = () => {
   return (
-    <div id='container-automoviles'>
+    <div id='container-catalogo'>
       <Vehiculo 
             imagen= {Auto1}
             modelo='Aveo'
