@@ -40,7 +40,7 @@
     border-radius: 20px;
     color: white;
     margin-bottom: 10px;
-    width: 20vw;
+    width: 19vw;
     height: 40px;
 }
 #precio{
@@ -50,6 +50,9 @@
     .container-img-vehiculo{
         width: 28vw;
         height: 33vh;
+    }
+    .vehiculo-info > button{
+        width: 20vw;
     }
 }
 @media only screen and (max-width: 768px) {

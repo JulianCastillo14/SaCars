@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/Login.css'
+import Perfil from './Perfil';
 
 const UserIcon = () => (
   <svg className='icon-movil' xmlns="http://www.w3.org/2000/svg" width="4vw" height="4vh" viewBox="0 0 24 24">
@@ -77,7 +78,7 @@ const [isVisible, setIsVisible] = useState(true);
               <a href="#" onClick={onSignUpClick}> Crea una cuenta</a>
             </div>
           </div>  
-      </div>         
+      </div>        
     </div>
           
   ) : null;

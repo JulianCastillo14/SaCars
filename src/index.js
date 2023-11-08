@@ -3,14 +3,18 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+import App from './frontend/screens/BMW.jsx';
+
 //import App from './frontend/components/MasInformacion.jsx';
-import App from './frontend/screens/Inicio.jsx';
+//import App from './frontend/screens/Inicio.jsx';
 //import App from './frontend/components/Opciones-nav.jsx';
 //import App from './frontend/components/Header.jsx';
 //import App from './frontend/components/Login.jsx';
 //import App from './frontend/components/SignUp.jsx'
 //import App from './frontend/components/CarritoCompras.jsx'
 //import App from './frontend/screens/Automoviles.jsx';
+//import App from './frontend/components/Configuracion.jsx'
+//import App from './frontend/components/Perfil.jsx'
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

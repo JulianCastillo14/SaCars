@@ -34,13 +34,18 @@
     background: url('../assets/images/marcas/nissan-logo.png') no-repeat;
     background-size: contain;
     border: none;
-
 }
 .BMW{
     background: url('../assets/images/marcas/BMW-logo.png') no-repeat;
     background-size: contain;
     border: none;
 } 
+@media only screen and (max-width: 768px) {
+    .marca{
+        height: 10vh;
+    }
+
+}
 @media only screen  and (max-width: 391px) {
     #Marcas{
         flex-direction: column;

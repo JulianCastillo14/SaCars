@@ -1,0 +1,65 @@
+#container-perfil{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#exit-info{
+    color: white;
+    background-color: #053B50;
+    padding-top: 10px;
+    width: 35vw;
+    padding-left: 31vw;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+#Datos{
+    display: flex;
+    flex-direction: column;
+    background-color: #053B50;
+    color: white;
+    padding: 10px 40px;
+    width: 35vw;
+    border: none;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    font-size: medium;
+}
+.Dato{
+    color: #1AACAC;
+}
+@media only screen and (max-width: 768px) {
+    #exit-info{
+        width: 60vw;
+        padding-left: 55vw;
+    }
+    #Datos{
+        width: 60vw;
+        border: none;
+    }
+}
+@media only screen  and (max-width: 391px) {
+    #container-perfil{
+        align-items: normal;
+    }
+    #exit-info, #Datos{
+        width: 100vw;
+    }
+    #exit-info{
+        margin-top: 7vh; 
+        padding-left: 93vw;    
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+    #Datos{ 
+        height: 93vh;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+}
