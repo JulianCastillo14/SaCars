@@ -63,12 +63,15 @@
 }
 .c2 > input{
     margin-left: 2vw;
-    width: 18vw;
+    width: 17vw;
 }
 label::after {
     content: "*";
     color: red;
-  }
+}
+#titulo-r{
+    color: #1AACAC;
+}
   
 @media only screen and (max-width: 768px) {
     #exit{
@@ -85,7 +88,7 @@ label::after {
         margin-right: 2vw;
     }
     .c2 > input{
-        width: 26vw;
+        width: 25vw;
         margin-right: 2vw;
     }
     
@@ -117,7 +120,7 @@ label::after {
         margin-right: 2vw;
     }
     .c2 > input{
-        width: 39vw;
+        width: 37vw;
         margin-right: 2vw;
     }
 }

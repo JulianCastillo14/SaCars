@@ -27,15 +27,22 @@ const Inicio = () => {
   const handleShowSignUp = () => {
     setShowSignUp(true);
   }
+  const handleLoginClose = () => {
+    setShowLogin(false);
+    setShowSignUp(true);
+  };
+  const handleCloseLogin = () => {
+    setShowLogin(false);
+  };
 
   const imagenesInicio = [imagen1, imagen2, imagen3, imagen4]
 
   return (
     <div>
-      <HeaderSB onToggleOpciones={handleToggleOpciones} onLoginClick={handleShowLogin} onSignUpClick={handleShowSignUp}></HeaderSB>
-      {showOpciones && <OpcionesSB onLoginClick={handleShowLogin} onSignUpClick={handleShowSignUp}></OpcionesSB>}
-      {showLogin && <Login onClose={() => setShowLogin(false)}></Login>}
-      {showSignUp && <SignUp onClose={() => setShowSignUp(false)}></SignUp>}
+      <HeaderSB onToggleOpciones={handleToggleOpciones} onLoginClick={handleShowLogin} onSignUpClick={handleShowSignUp} />
+      {showOpciones && <OpcionesSB onLoginClick={handleShowLogin} onSignUpClick={handleShowSignUp} />}
+      {showLogin && <Login onClose={handleCloseLogin} onSignUpClick={handleLoginClose} />}
+      {showSignUp && <SignUp onClose={() => setShowSignUp(false)} />}
       <Carrusel imagenes={imagenesInicio} />
       <section id='marcas'>
         <h3>Marcas</h3>
@@ -44,4 +51,4 @@ const Inicio = () => {
     </div>
   )
 }
-export default Inicio
+export default Inicio;

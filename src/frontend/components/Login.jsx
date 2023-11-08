@@ -31,11 +31,16 @@ const ExitLoginIcon = () => (
   </svg>
 );
 
-const Login = ({ onClose }) => {
+const Login = ({ onClose, onSignUpClick }) => {
   const [passwordShown, setPasswordShown] = useState(false);
   const togglePasswordVisiblity = () => {
     setPasswordShown(!passwordShown);
 };
+
+  const handleClick = (e) => {
+    onClose(e);
+    onSignUpClick(e);
+  };
 
 const [isVisible, setIsVisible] = useState(true);
 
@@ -46,7 +51,7 @@ const [isVisible, setIsVisible] = useState(true);
         <div id='exit' onClick={onClose}>
           <ExitLoginIcon/>
         </div>
-          <h2>Iniciar sesión en SaCars </h2>
+          <h2 id='titulo-is'>Iniciar sesión en SaCars </h2>
           <div className='iniciar-sesion'>
               <div className="input-field">
                 <h5>Nombre de usuario o correo electrónico</h5>
@@ -69,7 +74,7 @@ const [isVisible, setIsVisible] = useState(true);
             <button id='btn-iniciar-sesion'>Iniciar sesión</button>
             <div className='crear-cuenta'>
               ¿Nuevo en Sacars?
-              <a href="#"> Crea una cuenta</a>
+              <a href="#" onClick={onSignUpClick}> Crea una cuenta</a>
             </div>
           </div>  
       </div>         

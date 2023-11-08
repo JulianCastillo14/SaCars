@@ -87,6 +87,9 @@
     font-size: 20px;
     margin-top: 30px;
 }
+#titulo-is{
+    color: #1AACAC;
+}
 @media only screen and (max-width: 768px) {
     .login, #exit{
         width: 60vw;

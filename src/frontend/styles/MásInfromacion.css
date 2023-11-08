@@ -52,10 +52,17 @@
     height: 40px;
     font-size: 20px;
     margin-top: 30px;
+    margin-bottom: 10px;
 }
 label::after {
     content: "*";
     color: red;
+}
+#titulo-form, #descripcion-v{
+    color: #1AACAC;
+}
+#des{
+    margin-bottom: 2px;
 }
 @media only screen and (max-width: 768px) {
     #exit{

@@ -26,7 +26,7 @@ const Vehiculo = ({ imagen, modelo, descripcion, anio, color, precio }) => {
                 <p id='precio'>Precio: ${precio}</p>
                 <button onClick={handleMoreInfoClick}>Más información</button>
             </div>
-            {showMoreInfo && <MasInformacion onClose={handleClose} />}
+            {showMoreInfo && <MasInformacion descripcion={descripcion} onClose={handleClose} />}
         </div>
     );
 };

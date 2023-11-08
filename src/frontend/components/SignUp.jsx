@@ -60,13 +60,13 @@ import '../styles/SingUp.css';
             <ExitSingInIcon/>
         </div>
         <form id='formulario-signup' onSubmit={handleSubmit}>
-        <h2>Ingresa los siguientes datos:</h2>
+        <h2 id='titulo-r'>Ingresa los siguientes datos:</h2>
         <label htmlFor="nombreCompleto">Nombre completo</label>
         <input className="signup-input" type="text" name="nombreCompleto"  onChange={handleChange} />
         <label htmlFor="numeroDocumento">Número de documento</label>
         <input className="signup-input" type="text" name="numeroDocumento"  onChange={handleChange} />
         <label htmlFor="tipoDocumento">Tipo de documento</label>
-        <select className="signup-input" name="tipoDocumento" onChange={handleChange}>
+        <select value="" className="signup-input" name="tipoDocumento" onChange={handleChange}>
           <option value="" disabled selected>Selecciona un tipo de documento</option>
           <option value="TI">Tarjeta de identidad</option>
           <option value="CC">Cédula de ciudadanía</option>
@@ -75,9 +75,7 @@ import '../styles/SingUp.css';
         </select>
         <label htmlFor="fechaNacimiento">Fecha de nacimiento</label>
         <input className="signup-input" type="date" name="fechaNacimiento" onChange={handleChange} />
-        <label htmlFor="direccion">Dirección*</label>
-        <input className="signup-input" type="text" name="direccion"  onChange={handleChange} />
-        <label htmlFor="celular">Celular*</label>
+        <label htmlFor="celular">Celular</label>
         <input className="signup-input" type="text" name="celular"  onChange={handleChange} />
         <label htmlFor="correoElectronico">Correo electrónico</label>
         <input className="signup-input" type="email" name="correoElectronico" placeholder="Correo electrónico" onChange={handleChange} />

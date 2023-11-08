@@ -7,7 +7,7 @@ const ExitSingInIcon = () => (
     </svg>
   );
 
-const MasInformacion = ({ onClose }) => {
+const MasInformacion = ({ descripcion, onClose }) => {
     const [form, setForm] = useState({
         nombreCompleto: '',
         numeroDocumento: '',
@@ -45,13 +45,13 @@ const MasInformacion = ({ onClose }) => {
               <ExitSingInIcon/>
           </div>
           <form id='formulario-masInfo' onSubmit={handleSubmit}>
-          <h2>Ingresa los siguientes datos para contactarte:</h2>
+          <h2 id='titulo-form'>Ingresa los siguientes datos para contactarte:</h2>
           <label htmlFor="nombreCompleto">Nombre completo</label>
           <input className="masInfo-input" type="text" name="nombreCompleto" onChange={handleChange} />
           <label htmlFor="numeroDocumento">Número de documento</label>
           <input className="masInfo-input" type="text" name="numeroDocumento" onChange={handleChange} />
           <label htmlFor="tipoDocumento">Tipo de documento</label>
-          <select className="masInfo-input" name="tipoDocumento" onChange={handleChange}>
+          <select value="" className="masInfo-input" name="tipoDocumento" onChange={handleChange}>
             <option value="" disabled selected>Selecciona un tipo de documento</option>
             <option value="TI">Tarjeta de identidad</option>
             <option value="CC">Cédula de ciudadanía</option>
@@ -62,7 +62,10 @@ const MasInformacion = ({ onClose }) => {
           <input className="masInfo-input" type="text" name="celular"  onChange={handleChange} />
           <label htmlFor="correoElectronico">Correo electrónico</label>
           <input className="masInfo-input" type="email" name="correoElectronico" onChange={handleChange} />
+          <h4 id='descripcion-v'>Detalle del vehiculo</h4>
+          <p id='des'>{descripcion}</p>
           <button id='btn-enviar' type="submit">Enviar</button>
+          
         </form>
         </div>
       </div>
