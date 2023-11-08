@@ -1,13 +1,8 @@
-import HeaderSB from '../components/Header.jsx'
-import OpcionesSB from '../components/Opciones-nav.jsx'
 import Carrusel from '../components/Carrusel.jsx'
 import Marcas from '../components/Marcas.jsx'
-import Login from '../components/Login.jsx'
-import SignUp from '../components/SignUp.jsx'
-import Configuracion from '../components/Configuracion.jsx'
 import Vehiculo from '../components/Vehiculo.jsx'
-import Perfil from '../components/Perfil.jsx'
-import React, { useState } from 'react'
+import Layout from '../components/Layaut.jsx'
+import React from 'react'
 import imagen1 from '../assets/images/Inicio/joy-sedan-azul-neptuno.jpg'
 import imagen2 from '../assets/images/Inicio/tracker-turbo.png';
 import imagen3 from '../assets/images/Inicio/colorado.png';
@@ -15,50 +10,16 @@ import imagen4 from '../assets/images/Inicio/N400.jpg';
 import Auto13 from '../assets/images/Automoviles/sentra-nissan.png';
 import Auto7 from '../assets/images/Automoviles/focus-ford.png';
 import Auto9 from '../assets/images/Automoviles/yarisxs-toyota.png';
-
+import camioneta15 from '../assets/images/Camionetas/FORTUNER-Toyota.png';
+import camioneta2 from '../assets/images/Camionetas/Tracker-Turbo-RS-Chevrolet.png';
+import vans14 from '../assets/images/Vans/Nissan-Urvan.png';
 import '../styles/Inicio.css'
 
 const Inicio = () => {
-  const [showOpciones, setShowOpciones] = useState(false);
-  const [showLogin, setShowLogin] = useState(false);
-  const [showSignUp, setShowSignUp] = useState(false);
-  const [showConfig, setShowConfig] = useState(false);
-  const [showPerfil, setShowPerfil] = useState(false);
-
-  const handleToggleOpciones = () => {
-    setShowOpciones(!showOpciones);
-  }
-  const handleToggleConfig = () => {
-    setShowConfig(!showConfig);
-  }
-  const handleTogglePerfil = () => {
-    setShowPerfil(!showPerfil);
-  }
-
-  const handleShowLogin = () => {
-    setShowLogin(true);
-  }
-  const handleShowSignUp = () => {
-    setShowSignUp(true);
-  }
-  const handleLoginClose = () => {
-    setShowLogin(false);
-    setShowSignUp(true);
-  };
-  const handleCloseLogin = () => {
-    setShowLogin(false);
-  };
-
   const imagenesInicio = [imagen1, imagen2, imagen3, imagen4]
 
   return (
-    <div>
-      <HeaderSB onToggleOpciones={handleToggleOpciones} onToggleConfig={handleToggleConfig} onLoginClick={handleShowLogin} onSignUpClick={handleShowSignUp} />
-      {showOpciones && <OpcionesSB onLoginClick={handleShowLogin} onSignUpClick={handleShowSignUp} />}
-      {showLogin && <Login onClose={handleCloseLogin} onSignUpClick={handleLoginClose} />}
-      {showSignUp && <SignUp onClose={() => setShowSignUp(false)} />}
-      {showConfig && <Configuracion onTogglePerfil={handleTogglePerfil}/>}
-      {showPerfil && <Perfil onClose={handleTogglePerfil}/>}
+     <Layout>
       <Carrusel imagenes={imagenesInicio} />
       <section className='titulos-sections'>
         <h3>Marcas</h3>
@@ -92,8 +53,32 @@ const Inicio = () => {
             color='Gris'
             precio='75.500.000'
           />
-        </div>
-    </div>
+          <Vehiculo 
+            imagen= {camioneta15}
+            modelo='FORTUNER'
+            descripcion='Toyota EDITION' 
+            anio='2023' 
+            color='Blanco'
+            precio='241.900.000'
+          />
+          <Vehiculo 
+            imagen= {camioneta2}
+            modelo='Tracker Turbo RS'
+            descripcion='Chevrolet Tracker Turbo RS' 
+            anio='2024' 
+            color='Negro'
+            precio='120.620.000'
+          />
+          <Vehiculo 
+            imagen= {vans14}
+            modelo='Urvan'
+            descripcion='La Nissan Urvan' 
+            anio='1999' 
+            color='Blanco'
+            precio='62.000.000'
+          />
+       </div>
+     </Layout>
   )
 }
 export default Inicio;

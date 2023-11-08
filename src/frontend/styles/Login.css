@@ -28,12 +28,14 @@
     font-size: 12px;
     margin: 0;
 }
-#exit{
+#exit-login{
     color: white;
     background-color: #053B50;
-    padding-top: 10px;
     width: 35vw;
+    padding-top: 10px;
     padding-left: 31vw;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 .iniciar-sesion{
     margin-top: 40px;
@@ -91,10 +93,10 @@
     color: #1AACAC;
 }
 @media only screen and (max-width: 768px) {
-    .login, #exit{
+    .login, #exit-login{
         width: 60vw;
     }
-    #exit{
+    #exit-login{
         padding-left: 54vw;
     }
     .iniciar-sesion{
@@ -115,7 +117,7 @@
     }
 }
 @media only screen  and (max-width: 391px) {
-    .login, #exit{
+    .login, #exit-login{
         width: 100vw;
     }
     .login{
@@ -123,7 +125,7 @@
         border-radius: 0;
         height: 93vh;
     }
-    #exit{
+    #exit-login{
         padding-left: 90vw;
     }
     .container-login{
@@ -136,6 +138,7 @@
     }
     .iniciar-sesion{
         width: 80vw;
+        margin-top: 20px;
     }
     .input-default > input {
         width: 56vw;;

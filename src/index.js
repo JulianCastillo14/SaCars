@@ -1,20 +1,8 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-import App from './frontend/screens/BMW.jsx';
-
-//import App from './frontend/components/MasInformacion.jsx';
-//import App from './frontend/screens/Inicio.jsx';
-//import App from './frontend/components/Opciones-nav.jsx';
-//import App from './frontend/components/Header.jsx';
-//import App from './frontend/components/Login.jsx';
-//import App from './frontend/components/SignUp.jsx'
-//import App from './frontend/components/CarritoCompras.jsx'
-//import App from './frontend/screens/Automoviles.jsx';
-//import App from './frontend/components/Configuracion.jsx'
-//import App from './frontend/components/Perfil.jsx'
+import App from './App'; // Asegúrate de que este es el camino correcto a tu archivo App.js
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -24,7 +12,4 @@ root.render(
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();

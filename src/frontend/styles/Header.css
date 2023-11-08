@@ -51,6 +51,11 @@
 #opciones{
     display: none;
 } 
+#inicio-access{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 @media only screen and (max-width: 1440px) {
     #navBar{
         width: 31vw;
@@ -89,5 +94,8 @@
         height: 6vw;
         width: 6vw;
         margin-right: 1vw;
+    }
+    #inicio-access{
+        margin-right: 42vw;
     }
 }

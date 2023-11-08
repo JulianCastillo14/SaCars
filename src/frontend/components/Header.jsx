@@ -1,17 +1,20 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import logo from '../assets/images/logo_sacars.png'
 import '../styles/Header.css'
 
 const Header = (props) => {
   return (
     <header id='encabezado'>
-        <img className='logo-nav' src={logo} alt='Logo del concesionario"'/>
-        <h1>SaCars</h1>
+        <Link to="/" id='inicio-access'>
+          <img className='logo-nav' src={logo} alt='Logo del concesionario"'/>
+          <h1>SaCars</h1>
+        </Link>
         <nav id='navBar'>
-            <a href="#" >AUTOMÓVILES</a>
-            <a href="#" >CAMIONETAS</a>
-            <a href="#" >PICK-UPS</a>
-            <a href="#" >VANS</a>
+            <a href="/automoviles" >AUTOMÓVILES</a>
+            <a href="/camionetas" >CAMIONETAS</a>
+            <a href="/pickups" >PICK-UPS</a>
+            <a href="/vans" >VANS</a>
         </nav>
         <div className='button-group'>
                 <button className='button button-left' onClick={props.onSignUpClick}>Registrarse</button>

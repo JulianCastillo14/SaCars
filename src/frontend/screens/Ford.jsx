@@ -1,5 +1,6 @@
 import React from 'react'
 import Vehiculo from '../components/Vehiculo.jsx'
+import Layout from '../components/Layaut.jsx'
 import '../styles/Catalogo.css'
 
 import Auto6 from '../assets/images/Automoviles/fiesta-ford.png';
@@ -17,97 +18,98 @@ import vans16 from '../assets/images/Vans/Chrysler-Pacífic-Ford.png';
 
 const Ford = () => {
   return (
-    <div id='container-catalogo'>
-        <Vehiculo 
-            imagen= {Auto6}
-            modelo='Fiesta'
-            descripcion='Ford Fiesta Se 1.6 Mec' 
-            anio='2018' 
-            color='Blanco'
-            precio='45.490.000'
-        />
-        <Vehiculo 
-            imagen= {Auto7}
-            modelo='Focus'
-            descripcion='Ford Focus 2.0 Se' 
-            anio='2018' 
-            color='Blanco'
-            precio='39.700.000'
-        />
-        <Vehiculo 
-            imagen= {Auto8}
-            modelo='Mundeo'
-            descripcion='Ford Mundeo' 
-            anio='2017' 
-            color='Dorado'
-            precio='125.900.000'
-        />
-        <Vehiculo 
-            imagen= {camioneta10}
-            modelo='EcoBoost'
-            descripcion='Nueva Ford Escape EcoBoost' 
-            anio='2020' 
-            color='Azul'
-            precio='179.990.000'
-        />
-        <Vehiculo 
-            imagen= {camioneta11}
-            modelo='Explorer'
-            descripcion='FORD EXPLORER XLT' 
-            anio='2014' 
-            color='Gris'
-            precio='228.990.000'
-        />
-        <Vehiculo 
-            imagen= {camioneta12}
-            modelo='Expedition'
-            descripcion='Nueva Ford Expedition Stealth 4x4' 
-            anio='2023' 
-            color='Negro'
-            precio='339.990.000'
-        />
-        <Vehiculo 
-            imagen= {PickUps4}
-            modelo='Ranger'
-            descripcion='Nueva Generación Ranger' 
-            anio='2023' 
-            color='Naranja'
-            precio='179.990.000'
-        />
-        <Vehiculo 
-            imagen= {PickUps5}
-            modelo='Ranger Raptor'
-            descripcion='Ford Ranger Raptor' 
-            anio='2024' 
-            color='Azul'
-            precio='362.990.000'
-        />
-        <Vehiculo 
-            imagen= {vans3}
-            modelo='Pasajeros XL'
-            descripcion='Ford TRANSIT PASAJEROS XL' 
-            anio='2019' 
-            color='Blanco'
-            precio='432.000.000'
-        />
-        <Vehiculo 
-            imagen= {vans4}
-            modelo='E-Series'
-            descripcion='Ford E-Series ' 
-            anio='2023' 
-            color='Azul'
-            precio='179.990.000'
-        />
-        <Vehiculo 
-            imagen= {vans16}
-            modelo='Chrysler Pacífica'
-            descripcion='Ford Chrysler Pacífica' 
-            anio='2019' 
-            color='Gris'
-            precio='62.000.000'
-        />
-    </div>
-
+    <Layout>
+        <div id='container-catalogo'>
+            <Vehiculo 
+                imagen= {Auto6}
+                modelo='Fiesta'
+                descripcion='Ford Fiesta Se 1.6 Mec' 
+                anio='2018' 
+                color='Blanco'
+                precio='45.490.000'
+            />
+            <Vehiculo 
+                imagen= {Auto7}
+                modelo='Focus'
+                descripcion='Ford Focus 2.0 Se' 
+                anio='2018' 
+                color='Blanco'
+                precio='39.700.000'
+            />
+            <Vehiculo 
+                imagen= {Auto8}
+                modelo='Mundeo'
+                descripcion='Ford Mundeo' 
+                anio='2017' 
+                color='Dorado'
+                precio='125.900.000'
+            />
+            <Vehiculo 
+                imagen= {camioneta10}
+                modelo='EcoBoost'
+                descripcion='Nueva Ford Escape EcoBoost' 
+                anio='2020' 
+                color='Azul'
+                precio='179.990.000'
+            />
+            <Vehiculo 
+                imagen= {camioneta11}
+                modelo='Explorer'
+                descripcion='FORD EXPLORER XLT' 
+                anio='2014' 
+                color='Gris'
+                precio='228.990.000'
+            />
+            <Vehiculo 
+                imagen= {camioneta12}
+                modelo='Expedition'
+                descripcion='Nueva Ford Expedition Stealth 4x4' 
+                anio='2023' 
+                color='Negro'
+                precio='339.990.000'
+            />
+            <Vehiculo 
+                imagen= {PickUps4}
+                modelo='Ranger'
+                descripcion='Nueva Generación Ranger' 
+                anio='2023' 
+                color='Naranja'
+                precio='179.990.000'
+            />
+            <Vehiculo 
+                imagen= {PickUps5}
+                modelo='Ranger Raptor'
+                descripcion='Ford Ranger Raptor' 
+                anio='2024' 
+                color='Azul'
+                precio='362.990.000'
+            />
+            <Vehiculo 
+                imagen= {vans3}
+                modelo='Pasajeros XL'
+                descripcion='Ford TRANSIT PASAJEROS XL' 
+                anio='2019' 
+                color='Blanco'
+                precio='432.000.000'
+            />
+            <Vehiculo 
+                imagen= {vans4}
+                modelo='E-Series'
+                descripcion='Ford E-Series ' 
+                anio='2023' 
+                color='Azul'
+                precio='179.990.000'
+            />
+            <Vehiculo 
+                imagen= {vans16}
+                modelo='Chrysler Pacífica'
+                descripcion='Ford Chrysler Pacífica' 
+                anio='2019' 
+                color='Gris'
+                precio='62.000.000'
+            />
+        </div>
+    </Layout>
   )
 }
 

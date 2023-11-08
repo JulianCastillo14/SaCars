@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import '../styles/Login.css'
-import Perfil from './Perfil';
 
 const UserIcon = () => (
   <svg className='icon-movil' xmlns="http://www.w3.org/2000/svg" width="4vw" height="4vh" viewBox="0 0 24 24">
@@ -49,7 +48,7 @@ const [isVisible, setIsVisible] = useState(true);
     <div className='container-login'>
       <div>
         <div className="login">
-        <div id='exit' onClick={onClose}>
+        <div id='exit-login' onClick={onClose}>
           <ExitLoginIcon/>
         </div>
           <h2 id='titulo-is'>Iniciar sesión en SaCars </h2>
