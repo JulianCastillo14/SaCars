@@ -8,7 +8,7 @@ const ExitPerfilIcon = () => (
 );
 
 const Perfil = ({onClose}) => {
-  const [isVisible, setIsVisible] = useState(true);
+  const [isVisible] = useState(true);
 
   return isVisible ? (
     <div id='container-perfil'>

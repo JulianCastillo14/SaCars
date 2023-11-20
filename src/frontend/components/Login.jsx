@@ -37,12 +37,12 @@ const Login = ({ onClose, onSignUpClick }) => {
     setPasswordShown(!passwordShown);
 };
 
-  const handleClick = (e) => {
-    onClose(e);
-    onSignUpClick(e);
-  };
+  // const handleClick = (e) => {
+  //   onClose(e);
+  //   onSignUpClick(e);
+  // };
 
-const [isVisible, setIsVisible] = useState(true);
+const [isVisible] = useState(true);
 
   return isVisible ? (
     <div className='container-login'>
