@@ -34,9 +34,7 @@ const MasInformacion = ({ descripcion, onClose }) => {
         console.log(form);
       }
 
-    const [isVisible, setIsVisible] = useState(true);
-
-    
+    const [isVisible] = useState(true);
 
     return isVisible ? (
       <div className="container-masInfo">
