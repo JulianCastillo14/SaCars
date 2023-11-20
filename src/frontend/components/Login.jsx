@@ -61,7 +61,7 @@ const [isVisible] = useState(true);
                 </div>
               </div>
               <div className="input-field container-password">
-                <h5>Contraseña<a href=''> Olvido la Contraseña</a></h5>
+                {/* <h5>Contraseña<a href=''> Olvido la Contraseña</a></h5> */}
                 <div className='input-default' id='section-ps'>
                   <PasswordIcon />
                   <input className='input-c c2' type={passwordShown ? "text" : "password"}/>
@@ -74,7 +74,7 @@ const [isVisible] = useState(true);
             <button id='btn-iniciar-sesion'>Iniciar sesión</button>
             <div className='crear-cuenta'>
               ¿Nuevo en Sacars?
-              <a href='' onClick={onSignUpClick}> Crea una cuenta</a>
+              {/* <a href='' onClick={onSignUpClick}> Crea una cuenta</a> */}
             </div>
           </div>  
       </div>        
