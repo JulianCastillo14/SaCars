@@ -72,7 +72,26 @@ label::after {
 #titulo-r{
     color: #1AACAC;
 }
-  
+
+@media only screen and (max-width: 1400px) {
+    #titulo-r{
+        font-size: medium;
+    }
+    #btn-registrarse{
+        font-size: medium;
+        margin-top: 0;
+        height: 30px;
+    }
+    .c2 > input{
+        margin-left: 2vw;
+        width: 16vw;
+    }
+    #exit{
+        height: 10px;
+    }
+}
+
+
 @media only screen and (max-width: 768px) {
     #exit{
         width: 60vw;
