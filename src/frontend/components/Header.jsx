@@ -8,7 +8,7 @@ const Header = (props) => {
     <header id='encabezado'>
         <Link to="/" id='inicio-access'>
           <img className='logo-nav' src={logo} alt='Logo del concesionario"'/>
-          <h1>SaCars</h1>
+          <h2>SaCars</h2>
         </Link>
         <nav id='navBar'>
             <a href="/automoviles" >AUTOMÓVILES</a>

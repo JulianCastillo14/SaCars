@@ -51,7 +51,7 @@ import '../styles/SingUp.css';
         setPasswordShown(!passwordShown);
     };
 
-  const [isVisible] = useState(true);
+  const [isVisible, setIsVisible] = useState(true);
 
   return isVisible ? (
     <div className="container-signup">
@@ -102,5 +102,4 @@ import '../styles/SingUp.css';
 };
 
 export default SignUp;
-
 

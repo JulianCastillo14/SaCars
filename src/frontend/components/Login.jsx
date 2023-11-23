@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import '../styles/Login.css'
+import { useNavigate } from 'react-router-dom';
+import UserContext from '../context/UserContext';
 
 const UserIcon = () => (
   <svg className='icon-movil' xmlns="http://www.w3.org/2000/svg" width="4vw" height="4vh" viewBox="0 0 24 24">
@@ -32,51 +34,75 @@ const ExitLoginIcon = () => (
 );
 
 const Login = ({ onClose, onSignUpClick }) => {
+  const { setUser } = useContext(UserContext);
+  const navigate = useNavigate();
+  const [usuarioOCorreo, setUsuarioOCorreo] = useState('');
+  const [contrasena, setContrasena] = useState('');
   const [passwordShown, setPasswordShown] = useState(false);
   const togglePasswordVisiblity = () => {
     setPasswordShown(!passwordShown);
-};
+  };
 
-  // const handleClick = (e) => {
-  //   onClose(e);
-  //   onSignUpClick(e);
-  // };
+  const handleClick = (e) => {
+    onClose(e);
+    onSignUpClick(e);
+  };
 
-const [isVisible] = useState(true);
+  const [isVisible, setIsVisible] = useState(true);
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    const response = await fetch('http://localhost:4000/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ usuarioOCorreo, contrasena }),
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      setUser(data.user); // asumiendo que tu servidor devuelve los datos del usuario en `data.user`
+      navigate('/automoviles');
+    } else {
+      alert('El inicio de sesión falló. Por favor, inténtalo de nuevo.');
+    }
+  };
 
   return isVisible ? (
     <div className='container-login'>
       <div>
         <div className="login">
-        <div id='exit-login' onClick={onClose}>
-          <ExitLoginIcon/>
-        </div>
+          <div id='exit-login' onClick={onClose}>
+            <ExitLoginIcon/>
+          </div>
           <h2 id='titulo-is'>Iniciar sesión en SaCars </h2>
-          <div className='iniciar-sesion'>
-              <div className="input-field">
-                <h5>Nombre de usuario o correo electrónico</h5>
-                <div className='input-default'>
-                  <UserIcon />
-                  <input className='input-c' type="text"/>
-                </div>
+          <form className='iniciar-sesion' onSubmit={handleLogin}>
+            <div className="input-field">
+              <h5>Nombre de usuario o correo electrónico</h5>
+              <div className='input-default'>
+                <UserIcon />
+                <input className='input-c' type="text" value={usuarioOCorreo} onChange={e => setUsuarioOCorreo(e.target.value)} />
               </div>
-              <div className="input-field container-password">
-                <h5>Contraseña<a href=''> Olvido la Contraseña</a></h5>
-                <div className='input-default' id='section-ps'>
-                  <PasswordIcon />
-                  <input className='input-c c2' type={passwordShown ? "text" : "password"}/>
-                  <i onClick={togglePasswordVisiblity}>
-                    {passwordShown ? <EyeOpenIcon /> : <EyeClosedIcon />}
-                  </i> 
-                </div>
-                </div>
             </div>
-            <button id='btn-iniciar-sesion'>Iniciar sesión</button>
-            <div className='crear-cuenta'>
-              ¿Nuevo en Sacars?
-              <a href='' onClick={onSignUpClick}> Crea una cuenta</a>
+            <div className="input-field container-password">
+              <h5>Contraseña<a href="#"> Olvido la Contraseña</a></h5>
+              <div className='input-default' id='section-ps'>
+                <PasswordIcon />
+                <input className='input-c c2' type={passwordShown ? "text" : "password"} value={contrasena} onChange={e => setContrasena(e.target.value)} />
+                <i onClick={togglePasswordVisiblity}>
+                  {passwordShown ? <EyeOpenIcon /> : <EyeClosedIcon />}
+                </i> 
+              </div>
             </div>
-          </div>  
+            <button id='btn-iniciar-sesion' type="submit">Iniciar sesión</button>
+          </form>
+          <div className='crear-cuenta'>
+            ¿Nuevo en Sacars?
+            <a href="#" onClick={onSignUpClick}> Crea una cuenta</a>
+          </div>
+        </div>  
       </div>        
     </div>
           
