@@ -53,22 +53,25 @@ const Login = ({ onClose, onSignUpClick }) => {
   const handleLogin = async (e) => {
     e.preventDefault();
     const response = await fetch('http://localhost:4000/login', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ usuarioOCorreo, contrasena }),
-    });
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      usuarioOCorreo: usuarioOCorreo, // usa la variable de estado usuarioOCorreo
+      contrasena: contrasena // usa la variable de estado contrasena
+    })
+  });
 
-    const data = await response.json();
+  const data = await response.json();
 
-    if (data.success) {
-      setUser(data.user); // asumiendo que tu servidor devuelve los datos del usuario en `data.user`
-      navigate('/automoviles');
-    } else {
-      alert('El inicio de sesión falló. Por favor, inténtalo de nuevo.');
-    }
-  };
+  if (data.success) {
+    setUser(data.userData); // asumiendo que tu servidor devuelve los datos del usuario en `data.userData`
+    navigate('/perfil');
+  } else {
+    alert('El inicio de sesión falló. Por favor, inténtalo de nuevo.');
+  }
+};
 
   return isVisible ? (
     <div className='container-login'>

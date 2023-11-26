@@ -11,6 +11,7 @@ import PickUps from './frontend/screens/PickUps.jsx';
 import Toyota from './frontend/screens/Toyota.jsx';
 import Vans from './frontend/screens/Vans.jsx';
 import UserContext from './frontend/context/UserContext.jsx';
+import Perfil from './frontend/components/Perfil.jsx';
 function App() {
   const [user, setUser] = useState(null);
   
@@ -28,6 +29,7 @@ function App() {
           <Route path="/ford" element={<Ford />} />
           <Route path="/nissan" element={<Nissan />} />
           <Route path="/toyota" element={<Toyota />} />
+          <Route path="/perfil" element={<Perfil />} />
         </Routes>
       </Router>
     </UserContext.Provider>
