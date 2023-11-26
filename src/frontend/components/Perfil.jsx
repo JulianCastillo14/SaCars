@@ -19,23 +19,18 @@ const fechaFormateada = fechaNacimiento.toISOString().split('T')[0]; // Devuelve
 
   return isVisible && user ? (
     <Layout>
-      <div id='container-perfil'>
-      <div>
-        <div id='exit-info' onClick={onClose}>
-          <ExitPerfilIcon/>
-        </div>
         <div id='Datos'>
-          <h2>Perfil del Usuario</h2>
-          <p><strong className='Dato'>Nombre completo:</strong> {user.Nombre_Completo}</p>
-          <p><strong className='Dato'>Número de documento:</strong> {user.Numero_Documento}</p>
-          <p><strong className='Dato'>Tipo de documento:</strong> {user.Descripcion}</p>
-          <p><strong className='Dato'>Fecha de nacimiento:</strong> {fechaFormateada}</p>
-          <p><strong className='Dato'>Celular:</strong> {user.Celular}</p>
-          <p><strong className='Dato'>Correo electrónico:</strong> {user.Correo}</p>
-          <p><strong className='Dato'>Nombre de usuario:</strong> {user.Usuario}</p>
+          <div id='info'>
+            <h2>Perfil del Usuario</h2>
+            <p><strong className='Dato'>Nombre completo:</strong> {user.Nombre_Completo}</p>
+            <p><strong className='Dato'>Número de documento:</strong> {user.Numero_Documento}</p>
+            <p><strong className='Dato'>Tipo de documento:</strong> {user.Descripcion}</p>
+            <p><strong className='Dato'>Fecha de nacimiento:</strong> {fechaFormateada}</p>
+            <p><strong className='Dato'>Celular:</strong> {user.Celular}</p>
+            <p><strong className='Dato'>Correo electrónico:</strong> {user.Correo}</p>
+            <p><strong className='Dato'>Nombre de usuario:</strong> {user.Usuario}</p>
+          </div>
         </div>
-      </div>
-    </div>
     </Layout>
     
   ) : null;
