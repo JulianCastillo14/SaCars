@@ -8,6 +8,17 @@ const port = 4000;
 app.use(cors()); // Usa cors como middleware
 app.use(express.json());
 
+const cookieParser = require('cookie-parser');
+const session = require('express-session');
+
+app.use(cookieParser());
+app.use(session({
+  secret: 'your-secret-key',
+  resave: false,
+  saveUninitialized: true,
+  cookie: { secure: false, maxAge: 60000 } // Configura según tus necesidades
+}));
+
 app.get('/api/data', async (req, res) => {
     const result = await pool.query('SELECT * FROM Marca');
     console.log(result)

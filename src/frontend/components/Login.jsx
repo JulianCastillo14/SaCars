@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
 import '../styles/Login.css'
 import { useNavigate } from 'react-router-dom';
-import UserContext from '../context/UserContext';
+import  UserContext  from '../context/UserContext.jsx'; 
 
 const UserIcon = () => (
   <svg className='icon-movil' xmlns="http://www.w3.org/2000/svg" width="4vw" height="4vh" viewBox="0 0 24 24">
@@ -62,6 +62,8 @@ const Login = ({ onClose, onSignUpClick }) => {
       contrasena: contrasena // usa la variable de estado contrasena
     })
   });
+
+  console.log(response);
 
   const data = await response.json();
 

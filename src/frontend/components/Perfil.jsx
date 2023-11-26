@@ -1,23 +1,20 @@
 import React, { useContext, useState} from 'react';
 import '../styles/Perfil.css';
-import UserContext from '../context/UserContext.jsx';
+import  UserContext  from '../context/UserContext.jsx'; 
 import Layout from './Layaut.jsx';
 
-const ExitPerfilIcon = () => (
-  <svg className='icon-movil' xmlns="http://www.w3.org/2000/svg" width="4vw" height="4vh" viewBox="0 0 256 256">
-    <path fill="currentColor" d="M208.49 191.51a12 12 0 0 1-17 17L128 145l-63.51 63.49a12 12 0 0 1-17-17L111 128L47.51 64.49a12 12 0 0 1 17-17L128 111l63.51-63.52a12 12 0 0 1 17 17L145 128Z"/>
-  </svg>
-);
-
-const Perfil = ({ onClose }) => {
+const Perfil = () => {
   const [isVisible] = useState(true);
-  const { user } = useContext(UserContext); // Accede al usuario desde el contexto
+  const { user } = useContext(UserContext);
 
-const fechaNacimiento = new Date(user.Fecha_Nacimiento);
-const fechaFormateada = fechaNacimiento.toISOString().split('T')[0]; // Devuelve '2002-03-23'
+  if (!user) {
+    return null;
+  }
 
+  const fechaNacimiento = new Date(user.Fecha_Nacimiento);
+  const fechaFormateada = fechaNacimiento.toISOString().split('T')[0]; // Devuelve '2002-03-23'
 
-  return isVisible && user ? (
+  return isVisible ? (
     <Layout>
         <div id='Datos'>
           <div id='info'>
@@ -32,8 +29,8 @@ const fechaFormateada = fechaNacimiento.toISOString().split('T')[0]; // Devuelve
           </div>
         </div>
     </Layout>
-    
   ) : null;
 };
 
 export default Perfil;
+
