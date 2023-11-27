@@ -60,9 +60,9 @@ const ColorScreen = () => {
 
   return (
     <Layout>
-      <div className="container-CS">
+      <div className="container-CoS">
         <h2 className="my-4 text-center">Administración de Colores</h2>
-        <div className="input-group mb-3 crear-actualizar-CS">
+        <div className="input-group mb-3 crear-actualizar-CoS">
           <input
             type="text"
             className="form-control"

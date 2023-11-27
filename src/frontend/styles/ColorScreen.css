@@ -2,14 +2,14 @@
 *{
     font-family: 'Roboto', sans-serif;
 }
-.container-CS{
+.container-CoS{
     padding: 40px;
     margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.crear-actualizar-VS, .table{
+.crear-actualizar-CoS, .table{
     width: 600px;
 }
 .btn-margin-CS {

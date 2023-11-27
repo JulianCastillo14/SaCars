@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Layout from '../components/Layaut.jsx';
+import '../styles/ClienteScreen.css'
 
 const ClienteScreen = () => {
   const [clientes, setClientes] = useState([]);
@@ -65,12 +66,14 @@ const ClienteScreen = () => {
       console.error('Error al eliminar el cliente:', error);
     }
   };
+
+  
   
   return (
     <Layout>
-        <div className="container-CS">
+        <div className="container-ClieS">
         <h2 className="my-4 text-center">Administración de Clientes</h2>
-        <form className="mb-3">
+        <form className="mb-3 crear-actualizar-CLieS">
           <div className="form-group">
             <label>Número de Documento</label>
             <input
@@ -151,7 +154,7 @@ const ClienteScreen = () => {
           </div>
           <button
             type="button"
-            className="btn btn-outline-secondary"
+            className="btn btn-outline-secondary btn-margin-CLieS"
             onClick={editCliente ? updateCliente : createCliente}
           >
             {editCliente ? 'Actualizar' : 'Crear'}
@@ -177,7 +180,7 @@ const ClienteScreen = () => {
                 <td>{cliente.Numero_Documento}</td>
                 <td>{cliente.Descripcion}</td>
                 <td>{cliente.Nombre_Completo}</td>
-                <td>{cliente.Fecha_Nacimiento}</td>
+                <td>{new Date(cliente.Fecha_Nacimiento).toISOString().split('T')[0]}</td>
                 <td>{cliente.Celular}</td>
                 <td>{cliente.Correo}</td>
                 <td>{cliente.Usuario}</td>
