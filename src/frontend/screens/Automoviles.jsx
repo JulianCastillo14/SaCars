@@ -80,7 +80,7 @@ const Automoviles = () => {
                 modelo='Focus'
                 descripcion='Ford Focus 2.0 Se' 
                 anio='2018' 
-                color='Blanco'
+                color='Azul'
                 precio='39.700.000'
             />
             <Vehiculo 

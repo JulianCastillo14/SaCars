@@ -52,14 +52,14 @@ const Login = ({ onClose, onSignUpClick }) => {
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    const response = await fetch('http://localhost:4000/login', {
+    const response = await fetch('http://localhost:4000/api/login', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify({
-      usuarioOCorreo: usuarioOCorreo, // usa la variable de estado usuarioOCorreo
-      contrasena: contrasena // usa la variable de estado contrasena
+      usuarioOCorreo: usuarioOCorreo,
+      contrasena: contrasena 
     })
   });
 
@@ -77,7 +77,7 @@ const Login = ({ onClose, onSignUpClick }) => {
 
 const handleForgotPassword = async (e) => {
   e.preventDefault();
-  const response = await fetch('http://localhost:4000/forgot-password', {
+  const response = await fetch('http://localhost:4000/api/forgot-password', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
