@@ -1,8 +1,11 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+*{
+    font-family: 'Roboto', sans-serif;
+}
 #Datos{
     display: flex;
     flex-direction: column;
-    background-color: #0a516d;
+    background-color: #053B50;
     color: white;
     padding: 10px 40px;
     width: 100vw;
@@ -11,7 +14,6 @@
     font-size: medium;
     justify-content: center;
     align-items: center;
-    background-image: url('../assets/images/Automoviles/aveoGT-chevrolet.png');
 }
 #info{
     padding: 40px 40px;

@@ -12,6 +12,11 @@ import Toyota from './frontend/screens/Toyota.jsx';
 import Vans from './frontend/screens/Vans.jsx';
 import UserContext from './frontend/context/UserContext.jsx';
 import Perfil from './frontend/components/Perfil.jsx';
+import AdminScreen from './frontend/screens/AdminScreen.jsx'
+import MarcaScreen from './frontend/screens/MarcaScreen.jsx';
+import ColorScreen from './frontend/screens/ColorScreen.jsx';
+import VehiculoScreen from './frontend/screens/VehiculoScreen.jsx';
+import ClienteScreen from './frontend/screens/ClienteScreen.jsx';
 function App() {
   const [user, setUser] = useState(null);
   
@@ -20,6 +25,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Inicio />} />
+          <Route path="/perfil" element={<Perfil />} />
           <Route path="/automoviles" element={<Automoviles />} />
           <Route path="/camionetas" element={<Camionetas />} />
           <Route path="/pickups" element={<PickUps />} />
@@ -29,7 +35,11 @@ function App() {
           <Route path="/ford" element={<Ford />} />
           <Route path="/nissan" element={<Nissan />} />
           <Route path="/toyota" element={<Toyota />} />
-          <Route path="/perfil" element={<Perfil />} />
+          <Route path="/admin" element={<AdminScreen/>} />
+          <Route path="/marca" element={<MarcaScreen/>} />
+          <Route path="/color" element={<ColorScreen/>} />
+          <Route path="/vehiculo" element={<VehiculoScreen/>} />
+          <Route path="/cliente" element={<ClienteScreen/>} />
         </Routes>
       </Router>
     </UserContext.Provider>

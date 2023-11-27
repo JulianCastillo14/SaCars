@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+*{
+    font-family: 'Roboto', sans-serif;
+}
+.container-CS{
+    padding: 40px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.crear-actualizar-VS, .table{
+    width: 600px;
+}
+.btn-margin-CS {
+    margin-right: 10px;
+}
+.btn-margin-l-CS{
+    margin-left: 10px;
+}

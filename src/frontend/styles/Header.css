@@ -45,6 +45,13 @@
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
 }
+.administracion{
+    background-color: #1AACAC;
+    color: #EEEEEE;
+    border-radius: 20px;
+    margin-left: 100px;
+    font-size: 15px;
+}
 #perfil{
     margin: 0;
 }
@@ -90,9 +97,7 @@
     }
 }
 @media only screen  and (max-width: 391px) {
-    #navBar{
-        display: none;
-    }
+    
     #encabezado > h1{
         margin-right: 43vw;
     }
