@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Layout from '../components/Layaut.jsx';
-import { response } from 'express';
 
 const ClienteScreen = () => {
   const [clientes, setClientes] = useState([]);
