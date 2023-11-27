@@ -71,7 +71,28 @@ const Login = ({ onClose, onSignUpClick }) => {
     setUser(data.userData); // asumiendo que tu servidor devuelve los datos del usuario en `data.userData`
     navigate('/perfil');
   } else {
-    alert('El inicio de sesión falló. Por favor, inténtalo de nuevo.');
+    alert('El inicio de sesión falló. Por favor, revisa credenciales o solicita una nueva contraseña.');
+  }
+};
+
+const handleForgotPassword = async (e) => {
+  e.preventDefault();
+  const response = await fetch('http://localhost:4000/forgot-password', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      usuarioOCorreo: usuarioOCorreo,
+    })
+  });
+
+  const data = await response.json();
+
+  if (data.success) {
+    alert('Se ha enviado un correo electrónico con una nueva contraseña a tu correo electrónico registrado.');
+  } else {
+    alert('Hubo un error al intentar restablecer tu contraseña. Por favor, inténtalo de nuevo. Recuerda digitar tu correo o usario');
   }
 };
 
@@ -92,7 +113,7 @@ const Login = ({ onClose, onSignUpClick }) => {
               </div>
             </div>
             <div className="input-field container-password">
-              <h5>Contraseña<a href="#"> Olvido la Contraseña</a></h5>
+              <h5>Contraseña<a href="#" onClick={handleForgotPassword}>Olvidé mi contraseña</a></h5>
               <div className='input-default' id='section-ps'>
                 <PasswordIcon />
                 <input className='input-c c2' type={passwordShown ? "text" : "password"} value={contrasena} onChange={e => setContrasena(e.target.value)} />

@@ -5,7 +5,7 @@ import Layout from '../components/Layaut';
 import { Link } from 'react-router-dom';
 
 const AdminScreen = () => {
-  const tables = ['Marca', 'Color', 'Vehiculo', 'Cliente'];
+  const tables = ['Marca', 'Color', 'Vehiculo', 'Cliente','Cotizacion'];
 
   return (
     <Layout>

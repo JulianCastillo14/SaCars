@@ -2,16 +2,16 @@
 *{
     font-family: 'Roboto', sans-serif;
 }
-.container-ClieS{
+.container-CotS{
     padding: 40px;
     margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.crear-actualizar-CLieS, .table{
+.crear-actualizar-CotS, .table{
     width: 600px;
 }
-.btn-margin-CLieS {
+.btn-margin-CotS {
     margin-top: 10px;
 }

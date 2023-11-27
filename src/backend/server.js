@@ -1,9 +1,9 @@
 const express = require('express');
 const cors = require('cors'); 
-const { pool } = require("./db.js"); // Asegúrate de que el módulo db.js esté en el mismo directorio que este archivo o actualiza la ruta según sea necesario
-
+const { pool } = require("./db.js"); 
 const app = express();
 const port = 4000;
+const nodemailer = require('nodemailer');
 
 app.use(cors()); // Usa cors como middleware
 app.use(express.json());
@@ -42,6 +42,69 @@ app.post('/login', async (req, res) => {
         console.error(err);
         res.status(500).send({ error: 'Error al realizar la consulta' });
     }
+});
+
+// Configura el transporte de correo
+let transporter = nodemailer.createTransport({
+  service: 'gmail',
+  port: 465,
+  secure: true,
+  logger: true,
+  secureConnection: false,
+  auth: {
+    user: 'websacars@gmail.com',
+    pass: 'qams cmtc atmg zfts'
+  },
+  tls:{
+    rejectUnauthorized: true
+  }
+});
+
+app.post('/forgot-password', async (req, res) => {
+  const { usuarioOCorreo } = req.body;
+  const query = `
+    SELECT Cliente.*, Tipo_Documento.Descripcion 
+    FROM Cliente 
+    INNER JOIN Tipo_Documento ON Cliente.ID_Tipo_Documento = Tipo_Documento.ID_Tipo_Documento 
+    WHERE Usuario = ? OR Correo = ?
+  `;
+  
+  try {
+    const [rows, fields] = await pool.query(query, [usuarioOCorreo, usuarioOCorreo]);
+    if (rows.length > 0) {
+      const userData = rows[0];
+      
+      // Genera una nueva contraseña aleatoria
+      const newPassword = Math.random().toString(36).slice(-8);
+      
+      // Actualiza la contraseña en la base de datos
+      const updateQuery = 'UPDATE Cliente SET Contraseña = ? WHERE Numero_Documento = ?';
+      await pool.query(updateQuery, [newPassword, userData.Numero_Documento]);
+      
+      // Envía la nueva contraseña al correo electrónico del usuario
+      let mailOptions = {
+        from: 'websacars@gmail.com',
+        to: userData.Correo,
+        subject: 'Nueva contraseña',
+        text: `Tu nueva contraseña es: ${newPassword}`
+      };
+      
+      transporter.sendMail(mailOptions, function(error, info){
+        if (error) {
+          console.log(error);
+        } else {
+          console.log('Email sent: ' + info.response);
+        }
+      });
+      
+      res.send({ success: true, message: 'Se ha enviado una nueva contraseña a tu correo electrónico registrado.' });
+    } else {
+      res.status(401).send({ success: false, message: 'Usuario o correo no encontrados' });
+    }
+  } catch (err) {
+    console.error(err);
+    res.status(500).send({ error: 'Error al realizar la consulta' });
+  }
 });
 
 // Crear una nueva marca
@@ -246,6 +309,54 @@ app.delete('/api/cliente/:id', async (req, res) => {
   } catch (err) {
     console.error(err);
     res.status(500).send({ error: 'Error al eliminar el cliente' });
+  }
+});
+
+// Crear una nueva cotización
+app.post('/api/cotizacion', async (req, res) => {
+  const { ID_Cotizacion, ID_Vehiculo, Numero_Documento, Fecha } = req.body;
+  try {
+    const result = await pool.query('INSERT INTO Cotizacion_Cliente (ID_Cotizacion, ID_Vehiculo, Numero_Documento, Fecha) VALUES (?, ?, ?, ?)', [ID_Cotizacion, ID_Vehiculo, Numero_Documento, Fecha]);
+    res.status(201).send({ success: true, message: 'Cotización creada exitosamente' });
+  } catch (err) {
+    console.error(err);
+    res.status(500).send({ error: 'Error al crear la cotización' });
+  }
+});
+
+// Leer todas las cotizaciones
+app.get('/api/cotizacion', async (req, res) => {
+  try {
+    const [rows, fields] = await pool.query('SELECT * FROM Cotizacion_Cliente');
+    res.send({ success: true, data: rows });
+  } catch (err) {
+    console.error(err);
+    res.status(500).send({ error: 'Error al obtener las cotizaciones' });
+  }
+});
+
+// Actualizar una cotización
+app.put('/api/cotizacion/:id', async (req, res) => {
+  const { ID_Vehiculo, Numero_Documento, Fecha } = req.body;
+  const { id } = req.params;
+  try {
+    const result = await pool.query('UPDATE Cotizacion_Cliente SET ID_Vehiculo = ?, Numero_Documento = ?, Fecha = ? WHERE ID_Cotizacion = ?', [ID_Vehiculo, Numero_Documento, Fecha, id]);
+    res.send({ success: true, message: 'Cotización actualizada exitosamente' });
+  } catch (err) {
+    console.error(err);
+    res.status(500).send({ error: 'Error al actualizar la cotización' });
+  }
+});
+
+// Eliminar una cotización
+app.delete('/api/cotizacion/:id', async (req, res) => {
+  const { id } = req.params;
+  try {
+    const result = await pool.query('DELETE FROM Cotizacion_Cliente WHERE ID_Cotizacion = ?', [id]);
+    res.send({ success: true, message: 'Cotización eliminada exitosamente' });
+  } catch (err) {
+    console.error(err);
+    res.status(500).send({ error: 'Error al eliminar la cotización' });
   }
 });
 

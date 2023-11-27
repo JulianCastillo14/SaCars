@@ -160,7 +160,7 @@ const ClienteScreen = () => {
             {editCliente ? 'Actualizar' : 'Crear'}
           </button>
         </form>
-        <table className="table">
+        <table className="table table-striped">
           <thead>
             <tr>
               <th>Número de Documento</th>

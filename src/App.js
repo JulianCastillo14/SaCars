@@ -17,6 +17,7 @@ import MarcaScreen from './frontend/screens/MarcaScreen.jsx';
 import ColorScreen from './frontend/screens/ColorScreen.jsx';
 import VehiculoScreen from './frontend/screens/VehiculoScreen.jsx';
 import ClienteScreen from './frontend/screens/ClienteScreen.jsx';
+import CotizacionScreen from './frontend/screens/CotizacionScreen.jsx';
 function App() {
   const [user, setUser] = useState(null);
   
@@ -40,6 +41,7 @@ function App() {
           <Route path="/color" element={<ColorScreen/>} />
           <Route path="/vehiculo" element={<VehiculoScreen/>} />
           <Route path="/cliente" element={<ClienteScreen/>} />
+          <Route path="/cotizacion" element={<CotizacionScreen/>} />
         </Routes>
       </Router>
     </UserContext.Provider>

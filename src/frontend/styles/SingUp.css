@@ -72,7 +72,15 @@ label::after {
 #titulo-r{
     color: #1AACAC;
 }
-
+#registro-exitoso{
+    background-color: #053B50;
+    color: white;
+    font-size: 16px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    text-align: center;
+    padding-bottom: 10px;
+}
 @media only screen and (max-width: 1400px) {
     #titulo-r{
         font-size: medium;
