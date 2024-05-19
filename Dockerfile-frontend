@@ -1,0 +1,22 @@
+# Establecer la imagen base de Node.js
+FROM node:22
+
+# Creamos un directorio en el contenedor 
+RUN mkdir -p /home/app
+
+# Crear un directorio de trabajo en el contenedor
+WORKDIR /home/app
+
+# Copiar los archivos del frontend al contenedor
+COPY package.json .
+COPY . .
+RUN rm -r /home/app/src/backend/
+
+# Instalar las dependencias
+RUN npm install
+
+# Exponer el puerto (ajústalo según tus necesidades)
+EXPOSE 3000
+
+# Iniciar el frontend
+CMD ["npm", "start"]
